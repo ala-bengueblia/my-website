@@ -1,0 +1,539 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0 ;
+    padding: 0 ;
+    box-sizing: border-box ;
+    scroll-behavior: smooth;
+}
+header {
+    background-color: #141313;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px;
+    z-index: 99;
+    position: fixed;
+}
+.logo{
+    text-decoration:none ;
+    color:  #3a6cf4;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+
+}
+.navigation a{
+    color:  #3a6cf4;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1em;
+    padding-left: 30px;
+}
+.navigation a:hover{
+    color: #c9c5d3;
+}
+section{
+    padding: 100px 200px;
+}
+.main{
+    width: 90%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(images/im2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+.main h2{
+    color: #3a6cf4;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+.main h2 span{
+    display: inline-block;
+    margin-top: 10px;
+    color: #09397c;
+    font-size: 2.8em;
+    font-weight: 600;
+}
+.main h3{
+    color: #3a6cf4;
+    font-size: 1.8em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.main-btn{
+    color: #121212;
+    background-color: #3a6cf4;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    transition: 0.7s ease;
+
+}
+.main-btn:hover {
+    background-color: #1343f0;
+    transform: scale(1.1);
+}
+
+.social-icons a {
+    color: #4e9eff;
+    font-size: 3.2em;
+    padding-left: 30px;
+}
+.social-icons a:hover{
+    transform: scale(1.2);
+}
+.title {
+   display: flex;
+    justify-content: center;
+    color:  #3a6cf4;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+
+
+/* Styles pour la section About Me */
+.about {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #3a6cf4;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 20px;
+    animation: textFocusIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.about h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #3a6cf4;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s ease forwards;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    animation: slideInFromLeft 1s ease forwards;
+}
+
+.profile img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-right: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.profile img:hover {
+    transform: rotate(360deg) scale(1.1);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.about.active .profile img {
+    animation: pulse 1s ease-in-out infinite;
+}
+
+
+.profile img:hover {
+    transform: rotate(360deg) scale(1.1);
+}
+
+.profile-info {
+    max-width: 600px;
+    animation: fadeInUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s both;
+}
+
+.profile p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #666;
+    opacity: 0;
+    animation: fadeIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
+}
+
+
+/* Styles pour la classe active */
+.about.active h2 {
+    animation: textFocusIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.about.active .profile {
+    animation: slideInFromLeft 1s ease forwards;
+}
+
+.about.active .profile img {
+    animation: rotate 4s linear infinite;
+}
+
+.about.active .profile-info {
+    animation: fadeInUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s both;
+}
+
+.about.active p {
+    animation: fadeIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s both;
+}
+
+/* Nouvelle animation pour rotation de l'image */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Animation de focus-in pour le titre */
+@keyframes textFocusIn {
+    0% {
+        letter-spacing: 1em;
+        opacity: 0;
+    }
+    100% {
+        letter-spacing: normal;
+        opacity: 1;
+    }
+}
+
+/* Animation de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation de glissement depuis la gauche */
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animation de fade-in vers le haut */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+.card{
+    background-color: #fff;
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(1 1 1/ 15%);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.7s ease;
+
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.icon{
+    color: #0a49f6;
+    font-size: 8em;
+    text-align: center;
+}
+.info{
+    text-align: center;
+}
+
+.icon h3{
+    color: #0a49f6;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+
+}
+/* Réinitialiser certains styles par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.regime_elementaire {
+    padding: 40px;
+    background-color: #0f0e0e;
+    text-align: center;
+    color: #fff; 
+}
+
+.regime_elementaire .title {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.regime_elementaire .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Carte de projet */
+.project-card {
+    width: calc(50% - 20px); /* Augmenter la largeur des cartes */
+    margin: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    overflow: hidden;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    color: #333;
+    min-height: 300px; /* Réduire la hauteur minimale */
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Image du projet */
+.project-image {
+    width: 100%;
+    height: 150px; /* Réduire la hauteur de l'image/vidéo */
+    overflow: hidden;
+}
+
+.project-image img,
+.project-image video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Information du projet */
+.project-info {
+    padding: 20px;
+    flex: 1; /* Pour que le contenu prenne tout l'espace disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.project-category {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+.more.details {
+    display: block;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.more.details:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer */
+.footer {
+    background-color: #f2f2f2;
+    padding: 20px 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.projects{
+    background-color: #000016;
+}
+.projects .content{
+    margin-top: 30px;
+}
+.project-card{
+    background-color: #fff;
+    border: 3px solid #fff;
+    min-height: 12em;
+    width: 18em;
+    overflow: hidden;
+    border-radius: 17px;
+    margin: 12px;
+    transition: 0.7s ease;
+}
+.project-card:hover{
+    transform: scale(1.1);
+}
+.project-card:hover .project-image{
+    opacity: 0.8;
+}
+.project-image img{
+    width: 100%;
+}
+.project-info{
+    padding: 1em;
+}
+.project-category{
+    font-size: 0.8em;
+    color: #000;
+}
+.project-title{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
+}
+.more-details{
+    display: block;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.more-details:hover{
+    color: #601cfc;
+}
+.contact .icon{
+    font-size: 4.5em;
+}
+.contact .info h3{
+    color: #000;
+}
+.contact .info p {
+    font-size: 1.3em;
+}
+@media (max-width:1023px){
+    header{
+        padding: 12px 20px;
+    }
+    .navigation a{
+        padding-left: 10px;
+    }
+    .title{
+        font-size: 1.8em;
+    }
+    .section{
+        padding: 80px 20px;
+
+    }
+    .main-content h2{
+        font-size: 1em;
+    }
+    .main-content h3{
+        font-size: 1.6em;
+    }
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width:641px){
+    body{
+        font-size: 12px;
+    }
+    .main-content h2{
+        font-size: 0.8em;
+    }
+    .main-content h3{
+        font-size: 1.4em;
+    }
+}
+@media (max-width:300px){
+    body{
+        font-size: 10px;
+    }
+}

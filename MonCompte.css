@@ -1,0 +1,117 @@
+/* Réinitialisation des marges et des paddings pour le corps du document */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style de base pour toute la page */
+body {
+    font-family: Arial, sans-serif; /* Police par défaut */
+    line-height: 1.6; /* Espacement des lignes pour une meilleure lisibilité */
+    background-color: #f0f0f0; /* Couleur de fond pour la page */
+}
+
+/* Conteneur principal des sections */
+.section {
+    max-width: 1200px; /* Largeur maximale pour le contenu */
+    margin: 0 auto; /* Centrer le contenu */
+    padding: 20px; /* Espacement interne pour les sections */
+    background-color: #fff; /* Fond blanc pour chaque section */
+    border: 1px solid #ddd; /* Bordure autour des sections */
+    margin-bottom: 20px; /* Marge en bas de chaque section */
+}
+
+/* Style pour la section des cartes */
+.cards {
+    background-color: #f9f9f9; /* Fond gris clair */
+    padding: 40px; /* Espacement interne */
+}
+
+/* Style pour le bouton principal */
+.main-btn {
+    display: inline-block; /* Affichage en ligne pour le bouton */
+    padding: 10px 20px; /* Espacement interne du bouton */
+    background-color: #007bff; /* Couleur de fond bleu */
+    color: #fff; /* Couleur du texte blanc */
+    text-decoration: none; /* Supprimer le soulignement du lien */
+    border-radius: 5px; /* Coins arrondis */
+    font-weight: bold; /* Texte en gras */
+    transition: background-color 0.3s ease; /* Transition fluide pour le changement de couleur de fond */
+}
+
+.main-btn:hover {
+    background-color: #0056b3; /* Couleur de fond plus foncée au survol */
+}
+
+/* Style pour les cartes individuelles */
+.card {
+    display: flex; /* Affichage en flexbox pour aligner les éléments */
+    margin-bottom: 20px; /* Marge en bas des cartes */
+    padding: 20px; /* Espacement interne des cartes */
+    background-color: #fff; /* Fond blanc pour les cartes */
+    border: 1px solid #ddd; /* Bordure autour des cartes */
+    border-radius: 5px; /* Coins arrondis */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour l'effet de transformation et d'ombre */
+    overflow: hidden; /* Masquer le contenu qui dépasse */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Animation de léger décalage vers le haut au survol */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au survol */
+}
+
+.card .icon {
+    flex: 0 0 20%; /* Taille fixe pour l'icône, 20% de la largeur */
+    padding-right: 20px; /* Espacement à droite de l'icône */
+}
+
+.card .info {
+    flex: 1; /* Partie flexible pour les informations */
+}
+
+.card h1 {
+    font-size: 24px; /* Taille de police pour le titre */
+    margin-bottom: 10px; /* Marge en bas du titre */
+}
+
+.card p {
+    line-height: 1.4; /* Espacement des lignes pour le paragraphe */
+}
+
+.card ul {
+    list-style-type: disc; /* Puce comme style de liste */
+    margin-left: 20px; /* Marge à gauche pour la liste */
+}
+
+.card ul li {
+    margin-bottom: 5px; /* Marge en bas de chaque élément de liste */
+}
+
+/* Style pour les vidéos */
+.card video {
+    width: 100%; /* Vidéo prend toute la largeur de son conteneur */
+    height: auto; /* Hauteur automatique pour garder les proportions */
+    border-radius: 5px; /* Coins arrondis */
+    margin-bottom: 10px; /* Marge en bas de la vidéo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour l'effet de transformation et d'ombre */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+.card video:hover {
+    transform: scale(1.05); /* Zoom légèrement la vidéo au survol */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au survol */
+}
+
+/* Media query pour les petits écrans */
+@media (max-width: 768px){
+    .card {
+        flex-direction: column; /* Alignement vertical sur les petits écrans */
+    }
+
+    .card .icon {
+        flex: 0 0 auto; /* Taille automatique pour l'icône */
+        padding-right: 0; /* Aucun espacement à droite pour l'icône */
+        margin-bottom: 10px; /* Marge en bas pour séparer les éléments */
+    }
+}
